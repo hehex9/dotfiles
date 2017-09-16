@@ -6,9 +6,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'fatih/vim-go'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'w0rp/ale'
@@ -18,6 +16,11 @@ Plugin 'kien/ctrlp.vim'
 Bundle 'reasonml-editor/vim-reason'
 Plugin 'mattn/emmet-vim'
 Plugin 'ajh17/VimCompletesMe'
+" language syntax
+Plugin 'fatih/vim-go'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'wavded/vim-stylus'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()
 
 colorscheme solarized
