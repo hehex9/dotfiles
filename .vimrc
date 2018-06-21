@@ -12,15 +12,26 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'w0rp/ale'
 Plugin 'gagoar/StripWhiteSpaces'
 Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Bundle 'reasonml-editor/vim-reason'
 Plugin 'mattn/emmet-vim'
 Plugin 'ajh17/VimCompletesMe'
+Plugin 'mileszs/ack.vim'
+Plugin 'ryanoasis/vim-devicons'
 " language syntax
 Plugin 'fatih/vim-go'
+Plugin 'dgryski/vim-godef'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'wavded/vim-stylus'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'othree/jsdoc-syntax.vim'
+Plugin 'ElmCast/elm-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'posva/vim-vue'
+Plugin 'styled-components/vim-styled-components'
+Plugin 'kchmck/vim-coffee-script'
 call vundle#end()
 
 colorscheme solarized
@@ -28,9 +39,9 @@ colorscheme solarized
 filetype plugin indent on
 filetype on
 
-set encoding=utf8
-
 syntax enable
+
+set encoding=utf8
 
 set backspace=indent,eol,start
 set nu
@@ -57,21 +68,45 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+set listchars=tab:>-,trail:-
+set list
+
 set background=dark
 
-let g:nerdtree_tabs_open_on_console_startup=1
-let NERDTreeIgnore = ['.pyc$', 'node_modules$']
 
-let g:airline_powerline_fonts = 1
-
+"map
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 " use Enter to select when autocomplete menu opened
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-set listchars=tab:>-,trail:-
-set list
-autocmd FileType go setlocal noexpandtab nolist
+
+"auto-pairs
+let g:AutoPairsMultilineClose = 0
+let g:AutoPairsFlyMode = 0
+
+
+"nerdtree
+let g:nerdtree_tabs_open_on_console_startup=1
+let NERDTreeIgnore = ['.pyc$', 'node_modules$']
+
+
+"devicon
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+
+
+"airline
+let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'default'
+
+
+"go
+set completeopt-=preview
+autocmd FileType go setlocal noexpandtab nolist tabstop=4 shiftwidth=4
+let g:godef_split=0
+let g:go_version_warning = 0
+
 
 "ale
 let g:ale_echo_msg_error_str = 'E'
@@ -84,10 +119,27 @@ let g:ale_virtualenv_dir_names = ['envs', '.env', 'env', 've-py3', 've', 'virtua
 let g:ale_linters = {
 \   'python': ['flake8'],
 \   'html': [''],
+\   'java': [''],
 \}
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
+
 
 "ctrlP
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = '\v[\/]\.git|node_modules$'
+
+
+"vim-jsx
+let g:jsx_ext_required = 0
+
+
+"elm
+let g:elm_format_autosave = 0
+
 
 "merlin
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line

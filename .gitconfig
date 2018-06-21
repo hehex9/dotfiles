@@ -1,0 +1,12 @@
+[user]
+	name = pcxiong
+	email = xpc_kacl@163.com
+[alias]
+	st = status
+	br = branch
+	ci = commit
+	co = checkout
+	df = diff
+[core]
+	editor = /usr/bin/vim
+
