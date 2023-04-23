@@ -1,12 +1,13 @@
 [user]
-	name = pcxiong
-	email = xpc_kacl@163.com
+	name = hehe
+	email = xpc1993@gmail.com
 [alias]
 	st = status
 	br = branch
 	ci = commit
 	co = checkout
 	df = diff
+	cp = cherry-pick
 [core]
-	editor = /usr/bin/vim
+	editor = /usr/bin/nvim
 
