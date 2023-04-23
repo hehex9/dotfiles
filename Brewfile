@@ -1,0 +1,7 @@
+brew "direnv"
+brew "git"
+brew "the_silver_searcher"
+brew "tig"
+brew "tmux"
+brew "tree"
+brew "wget"
