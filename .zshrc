@@ -10,3 +10,4 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias ff="source ~/.zshrc"
 alias vi="nvim"
+alias p="pnpm"

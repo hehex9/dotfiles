@@ -1,13 +1,16 @@
 [user]
-	name = hehe
-	email = xpc1993@gmail.com
+  name = hehe
+  email = xpc1993@gmail.com
 [alias]
-	st = status
-	br = branch
-	ci = commit
-	co = checkout
-	df = diff
-	cp = cherry-pick
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  df = diff
+  cp = cherry-pick
 [core]
-	editor = /usr/local/bin/nvim
-
+  editor = /usr/local/bin/nvim
+[pager]
+  branch = false
+[init]
+  defaultBranch = main
