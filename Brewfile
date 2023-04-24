@@ -1,5 +1,8 @@
 brew "direnv"
+brew "fnm"
+brew "gh"
 brew "git"
+brew "neovim"
 brew "the_silver_searcher"
 brew "tig"
 brew "tmux"

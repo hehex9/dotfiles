@@ -9,5 +9,5 @@
 	df = diff
 	cp = cherry-pick
 [core]
-	editor = /usr/bin/nvim
+	editor = /usr/local/bin/nvim
 
