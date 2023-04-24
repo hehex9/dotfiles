@@ -1,0 +1,5 @@
+set commit-order = default
+set tab-size = 4
+set show-changes = true
+
+bind generic r refresh
