@@ -4,7 +4,7 @@ window:
 
 font:
   normal:
-    family: SauceCodePro Nerd Font
+    family: Menlo
     style: Regular
 
   size: 11.0

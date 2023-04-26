@@ -18,3 +18,12 @@ clean:
 	rm -f ~/.tmux.conf
 	rm -f ~/.vimrc
 	rm -f ~/.zshrc
+
+.PHONY: macos
+macos:
+	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+.PHONY: zsh
+zsh:
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
