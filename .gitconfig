@@ -9,7 +9,7 @@
   df = diff
   cp = cherry-pick
 [core]
-  editor = /usr/local/bin/nvim
+  editor = nvim
 [pager]
   branch = false
 [init]
