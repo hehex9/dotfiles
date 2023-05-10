@@ -1,8 +1,5 @@
-"execute pathogen#infect()
 set nocompatible
 filetype off
-
-" colorscheme solarized
 
 filetype plugin indent on
 filetype on
@@ -15,6 +12,7 @@ set backspace=indent,eol,start
 set nu
 set mouse=a
 set autoread
+
 " autoreload when entering the buffer or gaining focus
 au FocusGained,BufEnter * :silent! !
 
@@ -45,5 +43,3 @@ set background=dark
 "map
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
-" use Enter to select when autocomplete menu opened
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"

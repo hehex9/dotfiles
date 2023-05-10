@@ -1,8 +1,12 @@
 SHELL = /bin/zsh
 
+.PHONY: all
+all: sync
+
 .PHONY: sync
 sync:
 	mkdir -p ~/.config/alacritty
+	mkdir -p ~/Code/github
 	[ -f ~/.config/alacritty/alacritty.yml ] || ln -s $(PWD)/alacritty.yml ~/.config/alacritty/alacritty.yml
 	[ -f ~/.gitconfig ] || ln -s $(PWD)/.gitconfig ~/.gitconfig
 	[ -f ~/.tigrc ] || ln -s $(PWD)/.tigrc ~/.tigrc

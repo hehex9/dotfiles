@@ -1,1 +1,5 @@
-my dotfiles 🤔
+.dotfiles
+
+```
+make
+```

@@ -7,7 +7,7 @@ font:
     family: Menlo
     style: Regular
 
-  size: 11.0
+  size: 12.0
 
 schemes:
   solarized_dark: &dark
