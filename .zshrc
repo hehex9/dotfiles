@@ -12,6 +12,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export PATH=/usr/local/bin:$PATH
 
 # homebrew
 export HOMEBREW_PREFIX="/opt/homebrew";
@@ -24,8 +25,14 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 # fnm
 eval "$(fnm env --use-on-cd)"
 
-export PATH=/usr/local/bin:$PATH
+# alias
 alias ff="source ~/.zshrc"
 alias vi="nvim"
 alias p="pnpm"
 alias j="z"
+
+# goenv
+export GOENV_ROOT="$HOME/Code/github/goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH:$GOPATH/bin"

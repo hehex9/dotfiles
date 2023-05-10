@@ -8,6 +8,7 @@ sync:
 	mkdir -p ~/.config/alacritty
 	mkdir -p ~/Code/github
 	[ -f ~/.config/alacritty/alacritty.yml ] || ln -s $(PWD)/alacritty.yml ~/.config/alacritty/alacritty.yml
+	[ -f ~/.agignore ] || ln -s $(PWD)/.agignore ~/.agignore
 	[ -f ~/.gitconfig ] || ln -s $(PWD)/.gitconfig ~/.gitconfig
 	[ -f ~/.tigrc ] || ln -s $(PWD)/.tigrc ~/.tigrc
 	[ -f ~/.tmux.conf ] || ln -s $(PWD)/.tmux.conf ~/.tmux.conf
@@ -17,6 +18,7 @@ sync:
 .PHONY: clean
 clean:
 	rm -f ~/.config/alacritty/alacritty.yml
+	rm -f ~/.agignore
 	rm -f ~/.gitconfig
 	rm -f ~/.tigrc
 	rm -f ~/.tmux.conf
