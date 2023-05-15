@@ -30,9 +30,17 @@ alias ff="source ~/.zshrc"
 alias vi="nvim"
 alias p="pnpm"
 alias j="z"
+alias docker="nerdctl"
 
 # goenv
 export GOENV_ROOT="$HOME/Code/github/goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH:$GOPATH/bin"
+
+# pnpm
+export PNPM_HOME="/Users/hehe/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
