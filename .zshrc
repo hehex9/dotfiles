@@ -13,6 +13,13 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export PATH=/usr/local/bin:$PATH
+export EDITOR=nvim
+
+# goenv
+export GOENV_ROOT="$HOME/Code/github/goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH:$GOPATH/bin"
 
 # homebrew
 export HOMEBREW_PREFIX="/opt/homebrew";
@@ -30,17 +37,34 @@ alias ff="source ~/.zshrc"
 alias vi="nvim"
 alias p="pnpm"
 alias j="z"
-alias docker="nerdctl"
-
-# goenv
-export GOENV_ROOT="$HOME/Code/github/goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH:$GOPATH/bin"
+# alias docker="nerdctl"
 
 # pnpm
-export PNPM_HOME="/Users/hehe/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# go workaround
+export CGO_LDFLAGS='-Wl,-rpath,/usr/local/lib/'
+
+# android studio
+export ANDROID_HOME=$HOME/Library/Android/sdk/
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools

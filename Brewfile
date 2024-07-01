@@ -1,5 +1,6 @@
 brew "colima"
 brew "direnv"
+brew "docker"
 brew "fnm"
 brew "gh"
 brew "git"
