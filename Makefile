@@ -7,7 +7,7 @@ all: sync
 sync:
 	mkdir -p ~/.config/alacritty
 	mkdir -p ~/Code/github
-	[ -f ~/.config/alacritty/alacritty.yml ] || ln -s $(PWD)/alacritty.yml ~/.config/alacritty/alacritty.yml
+	[ -f ~/.config/alacritty/alacritty.toml ] || ln -s $(PWD)/alacritty.toml ~/.config/alacritty/alacritty.toml
 	[ -f ~/.agignore ] || ln -s $(PWD)/.agignore ~/.agignore
 	[ -f ~/.gitconfig ] || ln -s $(PWD)/.gitconfig ~/.gitconfig
 	[ -f ~/.tigrc ] || ln -s $(PWD)/.tigrc ~/.tigrc
