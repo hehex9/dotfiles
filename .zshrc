@@ -12,6 +12,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777,underline"
 export PATH=/usr/local/bin:$PATH
 export EDITOR=nvim
 
