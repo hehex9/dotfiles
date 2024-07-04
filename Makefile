@@ -28,6 +28,7 @@ clean:
 .PHONY: macos
 macos:
 	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+	defaults write com.google.Chrome ApplePressAndHoldEnabled -bool false
 
 .PHONY: omz
 omz:
